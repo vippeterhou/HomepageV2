@@ -3,7 +3,7 @@ function collectImages(photoList) {
   var images = ''
   for(var i = 0; i < photoList.length; i++) {
     var photo = photoList[i]
-    images += `<a data-fancybox="certificates" href="${photo}"><img class="galleryitem" src="${photo}" alt="${photo}" /></a>`
+    images += `<a data-fancybox="certificates" href="${url_for(photo)}"><img class="galleryitem" src="${url_for(photo)}" alt="${photo}" /></a>`
 
   }
   return images

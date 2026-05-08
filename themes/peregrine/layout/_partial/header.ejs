@@ -1,13 +1,13 @@
 <header id="header" class="header">
     <div class="header-container">
         <div class="logo-container">
-            <a class="logo" href="<%- theme.navitems.Home %> ">
-                <img src="/image/logo.svg">
+            <a class="logo" href="<%- url_for(theme.navitems.Home) %>">
+                <img src="<%- url_for('/image/logo.svg') %>">
             </a>
         </div>
         <div class="menu">
             <% for (var i in theme.navitems) { %>
-            <a class="navitems" href="<%- theme.navitems[i] %>"><%= i %></a>
+            <a class="navitems" href="<%- url_for(theme.navitems[i]) %>"><%= i %></a>
             <% } %>
         </div>
         <div id="moon-sun" class="moon-sun" onclick="switchDarkLightMode()">
